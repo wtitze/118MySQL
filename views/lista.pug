@@ -1,0 +1,24 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    // definizione della tabella
+    if list !== undefined
+      table
+        thead
+          th(align='left') N
+          th(align='left') Anno 
+          th(align='left') Tipo di intervento
+          th(align='left') Codici Rossi
+        each intervento, index in list
+          // una riga per ogni ristorante
+          tr
+            // prima cella numero progressivo della tabella
+            td= index
+            // seconda cella anno
+            td= intervento.anno
+            // terza cella tipo di intervento
+            td= intervento.InterventoTipo
+            // quarta cella numero interventi in codice rosso
+            td= intervento.CodiceRosso
